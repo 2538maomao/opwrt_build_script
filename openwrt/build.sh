@@ -68,8 +68,8 @@ if [ "$1" = "dev" ]; then
     export branch=openwrt-24.10
     export version=dev
 elif [ "$1" = "rc2" ]; then
-    #latest_release="v$(curl -s $mirror/tags/v24)"
-    export branch=24.10.0-rc2
+    latest_release="v$(curl -s $mirror/tags/v24)"
+    export branch=$latest_release
     export version=rc2
 fi
 
