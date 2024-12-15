@@ -68,13 +68,13 @@ if [ "$1" = "dev" ]; then
     export branch=openwrt-24.10
     export version=dev
 elif [ "$1" = "rc2" ]; then
-    latest_release="v$(curl -s $mirror/tags/v24)"
-    export branch=$latest_release
+    #latest_release="v$(curl -s $mirror/tags/v24)"
+    export branch=openWrt 24.10.0-rc2
     export version=rc2
 fi
 
 # lan
-[ -n "$LAN" ] && export LAN=$LAN || export LAN=10.0.0.1
+[ -n "$LAN" ] && export LAN=$LAN || export LAN=192.168.1.2
 
 # platform
 [ "$2" = "armv8" ] && export platform="armv8" toolchain_arch="aarch64_generic"
