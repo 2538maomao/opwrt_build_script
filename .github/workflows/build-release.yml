@@ -12,7 +12,7 @@ on:
         type: choice
         options:
           - 'release'
-          #- 'snapshot-24.10'
+          - 'snapshot-24.10'
       ccache:
         description: 'Enable ccache (Use Cache to speed up next build)'
         type: boolean
